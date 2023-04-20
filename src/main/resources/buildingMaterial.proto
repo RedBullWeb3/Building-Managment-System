@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ds.buildingMaterial";
+option java_outer_classname = "BuildingMaterialImpl";
+
+package buildingMaterial;
+
+// Interface exported by the server.
+service BuildingMaterial {
+  
+  rpc CheckMaterialLevel(MaterialRequest) returns (MaterialResponse) {}
+    
+  rpc MonitorMaterialLevels(MonitorLevels) returns (stream LevelsResponse){}
+
+  rpc SwitchToOrderMaterial (stream OrderMaterial) returns (OrderMaterialResponse){}
+
+}
+
+message MaterialRequest {
+  int32 tankId = 1;  
+}
+
+message MaterialResponse {
+  int32 tankLevel = 1;
+}
+
+message MonitorLevels {
+	int32 tankId = 1;
+	
+}
+
+message LevelsResponse {
+  int32 tankId = 1;
+  int32 currentLevel = 2;
+}
+
+message OrderMaterial {
+	int32 tankId = 1;
+	int32 tankLevels = 2;
+}
+
+message OrderMaterialResponse {
+  int32 currentMaterialUsed = 2;
+}

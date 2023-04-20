@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ds.buildingSiteMonitoring";
+option java_outer_classname = "BuildingSiteMonitoringImpl";
+
+package buildingSiteMonitoring;
+
+// Interface exported by the server.
+service BuildingMonitoringService {
+
+  rpc MonitorArea(AreaRequest) returns (stream AreaResponse) {}
+
+  rpc SendSensorData(stream SensorDataRequest) returns (stream SensorDataResponse){}
+
+}
+
+message AreaRequest {
+  string areaName = 1;
+}
+
+message AreaResponse {
+  int32 materialUsage = 1;
+  string issues = 2;
+}
+
+message SensorDataRequest {
+  string areaName = 1;
+  int32 materialUsage = 2;
+  string materialLeft = 3;
+}
+
+message SensorDataResponse {
+  string alert = 1;
+  string recommendation = 2;
+}

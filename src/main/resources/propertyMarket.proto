@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ds.propertyMarket";
+option java_outer_classname = "propertyMarketImpl";
+
+package propertyMarket;
+
+// Interface exported by the server.
+service PropertyMarketService {
+  
+rpc SetPropertyAvailability(desiredPropertyAvailable) returns (PropertyAvailableConfirm) {}
+  
+ rpc SendTenantsVolatility(stream TenantsVolatilityRequest) returns (TenantsVolatilityResponse) {}
+}
+
+message desiredPropertyAvailable {
+   int32 desiredAvailable = 1; 
+   
+  }
+
+message PropertyAvailableConfirm {
+   int32 currentPropertyAvailable = 1;
+   string confirmation = 2; 
+}
+
+message TenantsVolatilityRequest {
+  int32 freePropertyAvailable = 1;
+  int32 tenantsNumber = 2;
+  int32 occupiedProperties = 3;
+  int32 waitingQueue = 4;
+}
+
+
+message TenantsVolatilityResponse {
+   string recommendation = 1; 
+}
