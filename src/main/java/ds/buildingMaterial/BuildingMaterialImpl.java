@@ -54,23 +54,23 @@ public final class BuildingMaterialImpl {
   static {
     java.lang.String[] descriptorData = {
       "\n\026buildingMaterial.proto\022\020buildingMateri" +
-      "al\"!\n\017MaterialRequest\022\016\n\006tankId\030\001 \001(\005\"%\n" +
-      "\020MaterialResponse\022\021\n\ttankLevel\030\001 \001(\005\"\037\n\r" +
-      "MonitorLevels\022\016\n\006tankId\030\001 \001(\005\"6\n\016LevelsR" +
-      "esponse\022\016\n\006tankId\030\001 \001(\005\022\024\n\014currentLevel\030" +
-      "\002 \001(\005\"3\n\rOrderMaterial\022\016\n\006tankId\030\001 \001(\005\022\022" +
-      "\n\ntankLevels\030\002 \001(\005\"4\n\025OrderMaterialRespo" +
-      "nse\022\033\n\023currentMaterialUsed\030\002 \001(\0052\270\002\n\020Bui" +
-      "ldingMaterial\022]\n\022CheckMaterialLevel\022!.bu" +
-      "ildingMaterial.MaterialRequest\032\".buildin" +
-      "gMaterial.MaterialResponse\"\000\022^\n\025MonitorM" +
-      "aterialLevels\022\037.buildingMaterial.Monitor" +
-      "Levels\032 .buildingMaterial.LevelsResponse" +
-      "\"\0000\001\022e\n\025SwitchToOrderMaterial\022\037.building" +
-      "Material.OrderMaterial\032\'.buildingMateria" +
-      "l.OrderMaterialResponse\"\000(\001B-\n\023ds.buildi" +
-      "ngMaterialB\024BuildingMaterialImplP\001b\006prot" +
-      "o3"
+      "al\"%\n\017MaterialRequest\022\022\n\nmaterialId\030\001 \001(" +
+      "\005\")\n\020MaterialResponse\022\025\n\rmaterialLevel\030\001" +
+      " \001(\005\"#\n\rMonitorLevels\022\022\n\nmaterialId\030\001 \001(" +
+      "\005\":\n\016LevelsResponse\022\022\n\nmaterialId\030\001 \001(\005\022" +
+      "\024\n\014currentLevel\030\002 \001(\005\";\n\rOrderMaterial\022\022" +
+      "\n\nmaterialId\030\001 \001(\005\022\026\n\016materialLevels\030\002 \001" +
+      "(\005\"4\n\025OrderMaterialResponse\022\033\n\023currentMa" +
+      "terialUsed\030\002 \001(\0052\270\002\n\020BuildingMaterial\022]\n" +
+      "\022CheckMaterialLevel\022!.buildingMaterial.M" +
+      "aterialRequest\032\".buildingMaterial.Materi" +
+      "alResponse\"\000\022^\n\025MonitorMaterialLevels\022\037." +
+      "buildingMaterial.MonitorLevels\032 .buildin" +
+      "gMaterial.LevelsResponse\"\0000\001\022e\n\025SwitchTo" +
+      "OrderMaterial\022\037.buildingMaterial.OrderMa" +
+      "terial\032\'.buildingMaterial.OrderMaterialR" +
+      "esponse\"\000(\001B-\n\023ds.buildingMaterialB\024Buil" +
+      "dingMaterialImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -89,31 +89,31 @@ public final class BuildingMaterialImpl {
     internal_static_buildingMaterial_MaterialRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_buildingMaterial_MaterialRequest_descriptor,
-        new java.lang.String[] { "TankId", });
+        new java.lang.String[] { "MaterialId", });
     internal_static_buildingMaterial_MaterialResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_buildingMaterial_MaterialResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_buildingMaterial_MaterialResponse_descriptor,
-        new java.lang.String[] { "TankLevel", });
+        new java.lang.String[] { "MaterialLevel", });
     internal_static_buildingMaterial_MonitorLevels_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_buildingMaterial_MonitorLevels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_buildingMaterial_MonitorLevels_descriptor,
-        new java.lang.String[] { "TankId", });
+        new java.lang.String[] { "MaterialId", });
     internal_static_buildingMaterial_LevelsResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_buildingMaterial_LevelsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_buildingMaterial_LevelsResponse_descriptor,
-        new java.lang.String[] { "TankId", "CurrentLevel", });
+        new java.lang.String[] { "MaterialId", "CurrentLevel", });
     internal_static_buildingMaterial_OrderMaterial_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_buildingMaterial_OrderMaterial_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_buildingMaterial_OrderMaterial_descriptor,
-        new java.lang.String[] { "TankId", "TankLevels", });
+        new java.lang.String[] { "MaterialId", "MaterialLevels", });
     internal_static_buildingMaterial_OrderMaterialResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_buildingMaterial_OrderMaterialResponse_fieldAccessorTable = new

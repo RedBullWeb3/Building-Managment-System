@@ -16,8 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OrderMaterial() {
-    tankId_ = 0;
-    tankLevels_ = 0;
+    materialId_ = 0;
+    materialLevels_ = 0;
   }
 
   @java.lang.Override
@@ -46,12 +46,12 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            tankId_ = input.readInt32();
+            materialId_ = input.readInt32();
             break;
           }
           case 16: {
 
-            tankLevels_ = input.readInt32();
+            materialLevels_ = input.readInt32();
             break;
           }
           default: {
@@ -86,22 +86,22 @@ private static final long serialVersionUID = 0L;
             ds.buildingMaterial.OrderMaterial.class, ds.buildingMaterial.OrderMaterial.Builder.class);
   }
 
-  public static final int TANKID_FIELD_NUMBER = 1;
-  private int tankId_;
+  public static final int MATERIALID_FIELD_NUMBER = 1;
+  private int materialId_;
   /**
-   * <code>int32 tankId = 1;</code>
+   * <code>int32 materialId = 1;</code>
    */
-  public int getTankId() {
-    return tankId_;
+  public int getMaterialId() {
+    return materialId_;
   }
 
-  public static final int TANKLEVELS_FIELD_NUMBER = 2;
-  private int tankLevels_;
+  public static final int MATERIALLEVELS_FIELD_NUMBER = 2;
+  private int materialLevels_;
   /**
-   * <code>int32 tankLevels = 2;</code>
+   * <code>int32 materialLevels = 2;</code>
    */
-  public int getTankLevels() {
-    return tankLevels_;
+  public int getMaterialLevels() {
+    return materialLevels_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -118,11 +118,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (tankId_ != 0) {
-      output.writeInt32(1, tankId_);
+    if (materialId_ != 0) {
+      output.writeInt32(1, materialId_);
     }
-    if (tankLevels_ != 0) {
-      output.writeInt32(2, tankLevels_);
+    if (materialLevels_ != 0) {
+      output.writeInt32(2, materialLevels_);
     }
     unknownFields.writeTo(output);
   }
@@ -133,13 +133,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (tankId_ != 0) {
+    if (materialId_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, tankId_);
+        .computeInt32Size(1, materialId_);
     }
-    if (tankLevels_ != 0) {
+    if (materialLevels_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, tankLevels_);
+        .computeInt32Size(2, materialLevels_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -157,10 +157,10 @@ private static final long serialVersionUID = 0L;
     ds.buildingMaterial.OrderMaterial other = (ds.buildingMaterial.OrderMaterial) obj;
 
     boolean result = true;
-    result = result && (getTankId()
-        == other.getTankId());
-    result = result && (getTankLevels()
-        == other.getTankLevels());
+    result = result && (getMaterialId()
+        == other.getMaterialId());
+    result = result && (getMaterialLevels()
+        == other.getMaterialLevels());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -172,10 +172,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TANKID_FIELD_NUMBER;
-    hash = (53 * hash) + getTankId();
-    hash = (37 * hash) + TANKLEVELS_FIELD_NUMBER;
-    hash = (53 * hash) + getTankLevels();
+    hash = (37 * hash) + MATERIALID_FIELD_NUMBER;
+    hash = (53 * hash) + getMaterialId();
+    hash = (37 * hash) + MATERIALLEVELS_FIELD_NUMBER;
+    hash = (53 * hash) + getMaterialLevels();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -309,9 +309,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      tankId_ = 0;
+      materialId_ = 0;
 
-      tankLevels_ = 0;
+      materialLevels_ = 0;
 
       return this;
     }
@@ -339,8 +339,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ds.buildingMaterial.OrderMaterial buildPartial() {
       ds.buildingMaterial.OrderMaterial result = new ds.buildingMaterial.OrderMaterial(this);
-      result.tankId_ = tankId_;
-      result.tankLevels_ = tankLevels_;
+      result.materialId_ = materialId_;
+      result.materialLevels_ = materialLevels_;
       onBuilt();
       return result;
     }
@@ -389,11 +389,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ds.buildingMaterial.OrderMaterial other) {
       if (other == ds.buildingMaterial.OrderMaterial.getDefaultInstance()) return this;
-      if (other.getTankId() != 0) {
-        setTankId(other.getTankId());
+      if (other.getMaterialId() != 0) {
+        setMaterialId(other.getMaterialId());
       }
-      if (other.getTankLevels() != 0) {
-        setTankLevels(other.getTankLevels());
+      if (other.getMaterialLevels() != 0) {
+        setMaterialLevels(other.getMaterialLevels());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -424,54 +424,54 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int tankId_ ;
+    private int materialId_ ;
     /**
-     * <code>int32 tankId = 1;</code>
+     * <code>int32 materialId = 1;</code>
      */
-    public int getTankId() {
-      return tankId_;
+    public int getMaterialId() {
+      return materialId_;
     }
     /**
-     * <code>int32 tankId = 1;</code>
+     * <code>int32 materialId = 1;</code>
      */
-    public Builder setTankId(int value) {
+    public Builder setMaterialId(int value) {
       
-      tankId_ = value;
+      materialId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 tankId = 1;</code>
+     * <code>int32 materialId = 1;</code>
      */
-    public Builder clearTankId() {
+    public Builder clearMaterialId() {
       
-      tankId_ = 0;
+      materialId_ = 0;
       onChanged();
       return this;
     }
 
-    private int tankLevels_ ;
+    private int materialLevels_ ;
     /**
-     * <code>int32 tankLevels = 2;</code>
+     * <code>int32 materialLevels = 2;</code>
      */
-    public int getTankLevels() {
-      return tankLevels_;
+    public int getMaterialLevels() {
+      return materialLevels_;
     }
     /**
-     * <code>int32 tankLevels = 2;</code>
+     * <code>int32 materialLevels = 2;</code>
      */
-    public Builder setTankLevels(int value) {
+    public Builder setMaterialLevels(int value) {
       
-      tankLevels_ = value;
+      materialLevels_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 tankLevels = 2;</code>
+     * <code>int32 materialLevels = 2;</code>
      */
-    public Builder clearTankLevels() {
+    public Builder clearMaterialLevels() {
       
-      tankLevels_ = 0;
+      materialLevels_ = 0;
       onChanged();
       return this;
     }

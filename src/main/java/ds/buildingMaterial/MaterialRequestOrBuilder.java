@@ -8,7 +8,7 @@ public interface MaterialRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 tankId = 1;</code>
+   * <code>int32 materialId = 1;</code>
    */
-  int getTankId();
+  int getMaterialId();
 }

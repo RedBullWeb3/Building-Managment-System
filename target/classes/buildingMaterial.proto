@@ -18,26 +18,26 @@ service BuildingMaterial {
 }
 
 message MaterialRequest {
-  int32 tankId = 1;  
+  int32 materialId = 1;  
 }
 
 message MaterialResponse {
-  int32 tankLevel = 1;
+  int32 materialLevel = 1;
 }
 
 message MonitorLevels {
-	int32 tankId = 1;
+	int32 materialId = 1;
 	
 }
 
 message LevelsResponse {
-  int32 tankId = 1;
+  int32 materialId = 1;
   int32 currentLevel = 2;
 }
 
 message OrderMaterial {
-	int32 tankId = 1;
-	int32 tankLevels = 2;
+	int32 materialId = 1;
+	int32 materialLevels = 2;
 }
 
 message OrderMaterialResponse {

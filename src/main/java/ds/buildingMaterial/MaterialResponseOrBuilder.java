@@ -8,7 +8,7 @@ public interface MaterialResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 tankLevel = 1;</code>
+   * <code>int32 materialLevel = 1;</code>
    */
-  int getTankLevel();
+  int getMaterialLevel();
 }

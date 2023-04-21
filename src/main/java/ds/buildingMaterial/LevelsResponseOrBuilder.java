@@ -8,9 +8,9 @@ public interface LevelsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 tankId = 1;</code>
+   * <code>int32 materialId = 1;</code>
    */
-  int getTankId();
+  int getMaterialId();
 
   /**
    * <code>int32 currentLevel = 2;</code>
